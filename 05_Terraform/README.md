@@ -1,28 +1,56 @@
-# Spring Boot를 이용한 RESTful Web Services 개발
+# DevOps : Infrastructure as Code with 테라폼(Terraform) and AWS 초급, 입문편
 
 ### 목표
 
-- Spring Boot
-- REST API
-- RESTful services
-- JPA
+- Terraform
+- AWS 기본
+- DevOps 개념
+- 테라폼
+- 데브옵스
+- aws
 
 ### 내용
 
-애플리케이션을 테스트하는 여러 방법과 도구를 설명합니다.
+> 데브옵스란 어떤 요구사항을 효율적으로 만족시키기 위해 일을 자동화하며 변경사항 지표들을 측정하고, 공유하고, 이 모든 결과물들을 축적해 나아가는 문화를 만들어나가는 철학, 방법로느, 기술을 말합니다.
 
-> 2011년 베니스에서 소프트웨어 아키텍처 워크숍이 개최된 이후 마이크로서비스라는 용어를 사용하기 시작했습니다. 애플리케이션 구축에 전통적인 모놀리스 개발 방식 대신 마이크로서비스 개발 방식을 도입함으로써, 개발뿐만 아니라 유지/보수에 있어서도 비용 절감 및 효율성 증가가 이루어졌으며 고객의 요구사항 또한 빠르게 처리할 수 있게 되었습니다. 이러한 마이크로 서비스의 인기와 더불어서 RESTful이라는 개발 방식도 많이 사용되고 있습니다.
+### 핵심
 
-> Microservice Architecture란 기존 하나의 큰 단위로 개발/운영되던 애플리케이션을 수십, 수백, 많게는 수천게의 작은 서비스 단위로 쪼개서 애플리케이션을 개발/운영하는 방식을 말합니다. 이러한 Microservice를 개발하기 위해서는 각 서비스끼리 독립적으로 개발될 수 있어야 하며, 각 서비스에 최적화된 개발 언어와 데이터베이스를 선택할 수도 있는 Polyglot Programming(폴리글랏 프로그래밍)의 요건을 갖추어야 합니다.
+- 데브옵스로서 IaC는 반드시 필요한 기술이고, 테라폼은 IaC 툴 중에서 가장 사용 빈도가 높은 툴 중에 하나임.
+- 단순히 테라폼 사용법을 익히는 것에서 나아가, 실제 기업에서 사용할 수 있는 구조와 스킬들을 익힐 수 있음.
 
-> 이렇게 이기종(異機種)으로 개발된 애플리케이션 간에 데이터 통신을 위해서 표준화된 HTTP 프로토콜을 사용하는 RESTful 서비스를 널리 사용하고 있습니다.
-> Spring Boot는 독립 운영 가능한 Spring 기반 애플리케이션을 쉽게 개발할 수 있도록 지원해주는 개발 도구이자 Spring Project입니다. Spring Boot를 사용하면 바로 실행 가능한 독립형 Spring 애플리케이션을 쉽게 작성할 수 있으며, Spring framework와 기타 Third-party 라이브러리에 대한 설정 작업을 최소화 할 수 있으며, 비즈니스 로직에 더 많은 시간을 투자할 수 있습니다. 또한 Spring Boot의 Starter 컴포넌트들을 이용하면, 상용화에 필요한 통계, 상태 체크, 외부 설정 등에 관한 작업도 쉽게 구성할 수 있습니다.
+### 강의 특징
+
+- 강의 내의 실습은 모든 학습자가 처음부터 시작한다는 가정으로 진행됩니다.
+- 강의에서 진행된 내용은 웹사이트로 제공되므로 추후에 혼자 학습하시더라도 내용을 손쉽게 찾아보실 수 있습니다.
+- AWS Free Tier 내에서 사용 가능한 서비스만 사용합니다. (단, 실습을 진행하신 후에 리소스를 정상적으로 삭제하지 않으신 경우에는 비용이 청구될 수도 있습니다!)
 
 <br>
-총 48개, 6시간 43분 수업
+총 22개, 4시간 52분 수업
 
-|   섹션    | 목차                                       |                                              링크 및 수강여부                                               |
-| :-------: | :----------------------------------------- | :---------------------------------------------------------------------------------------------------------: |
-| **섹션0** | **Web Service & Web Application**          | [링크](https://github.com/jihyeonmun/SelfLearningaboutJavaSpring/tree/master/04_SpringBootRESTful/Section0) |
-|           | Web Service와 Web Application의 개요       |                                                                                                             |
-| **섹션1** | **Spring Boot로 개발하는 RESTful Service** | [링크](https://github.com/jihyeonmun/SelfLearningaboutJavaSpring/tree/master/04_SpringBootRESTful/Section1) |
+|   섹션    | 목차                               |                                          링크 및 수강여부                                           |
+| :-------: | :--------------------------------- | :-------------------------------------------------------------------------------------------------: | --- |
+| **섹션0** | **DevOps 이론**                    | [링크](https://github.com/jihyeonmun/SelfLearningaboutJavaSpring/tree/master/05_Terraform/Section0) |
+|           | DevOps의 기본적 이해               |
+|           | DevOps 엔지니어의 역할             |                                                                                                     |
+|           | 데브옵스 로드랩                    |                                                                                                     |     |
+| **섹션1** | **사전준비**                       | [링크](https://github.com/jihyeonmun/SelfLearningaboutJavaSpring/tree/master/05_Terraform/Section1) |
+|           | 테라폼 기본                        |                                                                                                     |
+|           | AWS EC and SSH                     |                                                                                                     |
+|           | Zsh 및 Oh-my-zsh 설치              |                                                                                                     |
+|           | AWS CLI 및 테라폼 설치             |                                                                                                     |
+|           | AWS Confiure 설정                  |                                                                                                     |
+|           | 테라폼 작동원리와 CLI 실습         |                                                                                                     |
+| **섹션2** | **테라폼으로 AWS 리소스 생성하기** | [링크](https://github.com/jihyeonmun/SelfLearningaboutJavaSpring/tree/master/05_Terraform/Section2) |
+|           | VPC 소개                           |                                                                                                     |
+|           | VPC와 서브넷 생성하기              |                                                                                                     |
+|           | IGW와 nat 게이트웨이 생성하기      |                                                                                                     |
+|           | Route Table 구성하기               |                                                                                                     |
+|           | Amazon S3 소개                     |                                                                                                     |
+|           | Amazon S3 실습                     |                                                                                                     |
+|           | AWS IAM 소개                       |                                                                                                     |
+|           | AWS IAM 실습 1&2                   |                                                                                                     |
+| **섹션3** | **테라폼 고도화 작업**             | [링크](https://github.com/jihyeonmun/SelfLearningaboutJavaSpring/tree/master/05_Terraform/Section3) |
+|           | 백엔드 활용하기                    |                                                                                                     |
+|           | 변수 활용하기                      |                                                                                                     |
+|           | 함수 활용하기                      |                                                                                                     |
+|           | 깃허브로 협업하기                  |                                                                                                     |
