@@ -4,6 +4,39 @@
 
 ## 4. 코드 커버리지는 어떻게 측정할까?
 
+```java
+
+public class Moim
+{
+    int maxNumberOfAttendees;
+    int numberOfEnrollment;
+    public boolean isEnrollementFull(){
+        if(maxNumberOfAttendees == 0){
+            return false;
+        }
+        if(numberOfEnrollment < maxNumberOfAttendees){
+            return false;
+        }
+        return true;
+    }
+}
+
+public class MoimTest
+{
+    /**
+     * Rigorous Test :-)
+     */
+    @Test
+    public void isFull(){
+        Moim moim = new Moim();
+        moim.maxNumberOfAttendees = 100;
+        moim.numberOfEnrollment = 10;
+        Assert.assertFalse(moim.isEnrollementFull());
+    }
+}
+
+```
+
 ## 코드 커버리지? 테스트 코드가 확인한 소스 코드를 %
 
 - JaCoCo를 써보자.
@@ -41,6 +74,9 @@ mvn clean verify
 ```
 
 커버리지 만족 못할시 빌드 실패하도록 설정
+
+> jacoco - index 파일을 통해서 보게 되면, 빨간색으로 테스트 하지 못한 부분도 확인할 수 있고,
+> 리포트를 보게 되면, 커버리지/브랜치 커버리지를 확인할 수 있다!
 
 ```xml
         <execution>
@@ -97,6 +133,36 @@ public class Masulsa {
 ASM: [ASM](https://asm.ow2.io/)
 Javassist: [Javassist](https://www.javassist.org/)
 ByteBuddy: [ByteBuddy](https://bytebuddy.net/#/)
+
+```java
+public class Masulsa {
+    public static void main(String[] args) {
+//        try {
+//            new ByteBuddy().redefine(Moja.class)
+//                    .method(named("pullOUt")).intercept(FixedValue.value("Rabbit!"))
+//                    .make().saveIn(new File("/Users/Programming/Java/JavaSpringGit/02_TheJavaCode/src/target/classes/"));
+//
+//        }catch (IOException e){
+//            e.printStackTrace();
+//        }
+        System.out.println(new Moja().pullOut());
+    }
+}
+//바이트 코드를 활용하게 되면, 위와 같이 소스 코드 작성하게 되면 아래와 같은 바이트코드로 만들어진다!
+package org.example;
+
+public class Moja {
+    public Moja() {
+    }
+
+    public String pullOut() {
+        return "Rabbit!";
+    }
+}
+
+```
+
+> 이름은 같지만, 실질적으론 다른 소스코드와 바이트코드를 갖는 moja.class라고 볼 수 있겠다!
 
 ---
 
